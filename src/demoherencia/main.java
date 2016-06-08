@@ -5,6 +5,10 @@
  */
 package demoherencia;
 
+import java.util.Scanner;
+import model.Cliente;
+import model.CuentaBancaria;
+
 /**
  *
  * @author ewewe
@@ -15,7 +19,24 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+              Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese Su Numero De Cuenta: ");
+        CuentaBancaria cuenta = new CuentaBancaria(12,"sarai","apellidos");
+        Cliente cliente = cuenta.getCliente();
+        cliente.setFechaDeNacimiento("18/12/96");
+        cliente.setDireccion("calle a");
+        cliente.setOcupacion("estudiante");
+        cliente.setEmail("124@gmail");
+        cliente.setTelefono("123456");
+      
+        System.out.println(cliente.getNombre());
+        System.out.println(cliente.getApellidos());
+        System.out.println(cliente.getFechaDeNacimiento());
+        System.out.println(cliente.getDireccion());
+        System.out.println(cliente.getOcupacion());
+        System.out.println(cliente.getEmail());
+        System.out.println(cliente.getTelefono());
+
     }
     
 }
